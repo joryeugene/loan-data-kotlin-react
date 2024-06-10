@@ -1,9 +1,10 @@
-import io.ktor.application.*
-import io.ktor.features.ContentNegotiation
-import io.ktor.gson.gson
-import io.ktor.http.HttpStatusCode
-import io.ktor.response.respond
-import io.ktor.routing.*
+import io.ktor.server.application.*
+import io.ktor.server.plugins.contentnegotiation.*
+import io.ktor.serialization.gson.*
+import io.ktor.server.plugins.cors.routing.*
+import io.ktor.http.*
+import io.ktor.server.response.*
+import io.ktor.server.routing.*
 import io.ktor.server.engine.embeddedServer
 import io.ktor.server.netty.Netty
 import org.jetbrains.exposed.sql.*
@@ -32,6 +33,13 @@ fun main() {
         install(ContentNegotiation) {
             gson { }
         }
+        install(CORS) {
+            anyHost()
+            allowMethod(HttpMethod.Get)
+            allowMethod(HttpMethod.Post)
+            allowHeader(HttpHeaders.ContentType)
+            allowCredentials = true
+        }
         routing {
             get("/loans") {
                 try {
@@ -44,14 +52,16 @@ fun main() {
                     val order = call.request.queryParameters["order"] ?: "asc"
                     val limit = call.request.queryParameters["limit"]?.toIntOrNull() ?: 100
 
+                    logger.info { "Received query parameters - date: $date, state: $state, grade: $grade, ficoLow: $ficoLow, ficoHigh: $ficoHigh, sortBy: $sortBy, order: $order, limit: $limit" }
+
                     val sortOrder = if (order.equals("desc", ignoreCase = true)) SortOrder.DESC else SortOrder.ASC
 
                     val loans = transaction {
                         LoanStats.selectAll()
                             .apply {
-                                date?.let { andWhere { LoanStats.issueDate eq it } }
-                                state?.let { andWhere { LoanStats.addrState eq it } }
-                                grade?.let { andWhere { LoanStats.grade eq it } }
+                                date?.takeIf { it.isNotEmpty() }?.let { andWhere { LoanStats.issueDate eq it } }
+                                state?.takeIf { it.isNotEmpty() }?.let { andWhere { LoanStats.addrState eq it } }
+                                grade?.takeIf { it.isNotEmpty() }?.let { andWhere { LoanStats.grade eq it } }
                                 ficoLow?.let { andWhere { LoanStats.ficoRangeLow greaterEq it } }
                                 ficoHigh?.let { andWhere { LoanStats.ficoRangeLow lessEq it } }
                             }
