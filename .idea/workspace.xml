@@ -5,12 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="152636fd-88a8-4835-bcf7-812c66ce3f70" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/loan-react/src/components/LoanList.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/loan-react/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/loan-react/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/loanApp/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/loanApp/.idea/gradle.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/loanApp/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/loanApp/build.gradle.kts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/loanApp/src/main/kotlin/Main.kt" beforeDir="false" afterPath="$PROJECT_DIR$/loanApp/src/main/kotlin/Main.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/loan-react/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/loan-react/public/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/loan-react/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/loan-react/src/App.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/loan-react/src/components/LoanList.js" beforeDir="false" afterPath="$PROJECT_DIR$/loan-react/src/components/LoanList.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,28 +26,28 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 8
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 8
+}</component>
   <component name="ProjectId" id="2hfF0d1ItN1T8R1Kq43pVOMD4iu" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "master",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/joryp/Documents/repos/loanKotlin",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/joryp/Documents/repos/loanKotlin&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -65,7 +64,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1717977002470</updated>
-      <workItem from="1717977003512" duration="2603000" />
+      <workItem from="1717977003512" duration="5038000" />
     </task>
     <servers />
   </component>

@@ -2,13 +2,19 @@
 
 This project is a full-stack application that provides an API to fetch loan data and a frontend to display the data.
 
+
+### Project Structure
+
+- loanApp/ - Contains the Kotlin backend application.
+- loan-react/ - Contains the React frontend application.
+
 ## Backend
 
 The backend is built with Kotlin and Ktor, and it uses an SQLite database.
 
 ### Running the Backend
 
-1. Place the `LoanStats_securev1_2017Q4.sqlite` file in the project root.
+1. Place the [LoanStats_securev1_2017Q4.sqlite](https://drive.google.com/file/d/1nvkQHOz2KVLRjnhYxdziVsBQzWwj81Ae/view?usp=share_link) file in the backend project root within `loanApp/`.
 
 ### API Endpoints
 
@@ -120,10 +126,6 @@ npm install
     npm start
 ```
 
-### Project Structure
-
-- loanApp/ - Contains the Kotlin backend application.
-- loan-react/ - Contains the React frontend application.
 
 ### Technologies Used
 

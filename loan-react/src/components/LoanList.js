@@ -39,9 +39,9 @@ const LoanList = () => {
     };
 
     return (
-        <div>
+        <div className="container">
             <h1>Loan List</h1>
-            <div>
+            <div className="filter-section">
                 <label>
                     Date:
                     <input type="date" name="date" value={filters.date} onChange={handleInputChange} />
@@ -85,28 +85,30 @@ const LoanList = () => {
                 </label>
                 <button onClick={fetchLoans}>Filter</button>
             </div>
-            <table>
-                <thead>
-                <tr>
-                    <th>ID</th>
-                    <th>Grade</th>
-                    <th>State</th>
-                    <th>Issue Date</th>
-                    <th>FICO Range Low</th>
-                </tr>
-                </thead>
-                <tbody>
-                {loans.map((loan) => (
-                    <tr key={loan.id}>
-                        <td>{loan.id}</td>
-                        <td>{loan.grade}</td>
-                        <td>{loan.addrState}</td>
-                        <td>{loan.issueDate}</td>
-                        <td>{loan.ficoRangeLow}</td>
+            <div className="table-container">
+                <table>
+                    <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Grade</th>
+                        <th>State</th>
+                        <th>Issue Date</th>
+                        <th>FICO Range Low</th>
                     </tr>
-                ))}
-                </tbody>
-            </table>
+                    </thead>
+                    <tbody>
+                    {loans.map((loan) => (
+                        <tr key={loan.id}>
+                            <td>{loan.id}</td>
+                            <td>{loan.grade}</td>
+                            <td>{loan.addrState}</td>
+                            <td>{loan.issueDate}</td>
+                            <td>{loan.ficoRangeLow}</td>
+                        </tr>
+                    ))}
+                    </tbody>
+                </table>
+            </div>
         </div>
     );
 };
