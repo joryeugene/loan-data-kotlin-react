@@ -2,6 +2,10 @@
 
 This project is a full-stack application that provides an API to fetch loan data and a frontend to display the data.
 
+Here is an example screenshot of the Loan List application:
+
+![Loan List Screenshot](loan-list-screenshot.png)
+
 ## Table of Contents
 1. [Project Structure](#project-structure)
 2. [Backend](#backend)
